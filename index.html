@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a21fb6557a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode" >
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-dark border-right dark-mode" id="sidebar-wrapper" style="position: relative;">
+            <div class="sidebar-heading text-white"></div>
+            <div class="list-group list-group-flush">
+                <a href="#home" class="list-group-item list-group-item-action bg-dark text-white dark-mode">Inicio</a>
+                <a href="#about" class="list-group-item list-group-item-action bg-dark text-white dark-mode">Acerca de</a>
+                <a href="#services" class="list-group-item list-group-item-action bg-dark text-white dark-mode">Servicios</a>
+                <a href="#contact" class="list-group-item list-group-item-action bg-dark text-white dark-mode">Contacto</a>
+                <div class="dropdown">
+                    <a class="list-group-item dark-mode list-group-item-action bg-dark text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Más
+                    </a>
+                    <div class="dropdown-menu dark-mode bg-dark" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item text-white bg-dark" href="#">Opción 1</a>
+                        <a class="dropdown-item text-white bg-dark" href="#">Opción 2</a>
+                    </div>
+                </div>
+                <div style="position: absolute; bottom: 0; width: 100%; padding: 10px;">
+                    <i class="fa fa-moon-o text-white" aria-hidden="true"></i>
+                    <label class="switch">
+                        
+                        <input type="checkbox" id="dark-mode-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom dark-mode">
+                <button class="btn btn-dark" id="menu-toggle">☰</button>
+                <div class="navbar-title">
+                    <img src="./assets/img/logo2.png" alt="logo" class="responsive-image">
+                    <h1 class="text-white">Momentum</h1>
+                </div>       
+            </nav>
+
+            <div class="container-fluid">
+                <section id="home">
+                    <h2>Bienvenidos</h2>
+                    <p>Este es el contenido de la página de inicio.</p>
+                </section>
+                <section id="about">
+                    <h2>Acerca de</h2>
+                    <p>Información sobre nosotros.</p>
+                </section>
+                <section id="services">
+                    <h2>Servicios</h2>
+                    <p>Descripción de los servicios ofrecidos.</p>
+                </section>
+                <section id="contact">
+                    <h2>Contacto</h2>
+                    <p>Detalles de contacto.</p>
+                </section>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
