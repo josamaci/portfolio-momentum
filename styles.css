@@ -15,13 +15,19 @@ body {
 #sidebar-wrapper {
     min-height: 100vh;
     width: 200px;
-    margin-left: -200px;
+    margin-left: 0;
     transition: margin 0.25s ease-out;
+    position: fixed; 
+    display: flex; 
+    flex-direction: column; 
+    background-color: #343a40;
+    z-index: 15555;
 }
 
 #sidebar-wrapper .sidebar-heading {
     padding: 0.875rem 1.25rem;
     font-size: 1.2rem;
+    margin-top: 25%;
 }
 
 #sidebar-wrapper .list-group-item {
@@ -33,7 +39,7 @@ body {
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    margin-left: 0;
+    margin-left: -200px;
 }
 
 .bg-dark {
@@ -60,16 +66,19 @@ body {
 .navbar{
     position: fixed !important;
     top: 0;
-    width: 100%;
     background-color: #333;
     color: white;
     padding: 15px 0;
     text-align: center;
-    z-index: 1000;
+    z-index: 70000;
+    margin-left: 200px; 
+    width: calc(100% - 200px); 
+    transition: margin 0.25s ease-out;
+    overflow-x: hidden;
 }
 
 .navbar-title{
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: flex-end;
     margin-right: 2.5%;
@@ -84,6 +93,24 @@ body {
 .container-fluid{
     padding: 2%;
     margin-top: 15%;
+    margin-left: 200px;
+    width: calc(100% - 200px); 
+    transition: margin 0.25s ease-out;
+    overflow-x: hidden;
+}
+
+.navbar.toggled{
+    margin-left: 0px;
+    width: 100%;
+}
+
+.container-fluid.toggled{
+    margin-left: 0px;
+    width: 100%;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: -200px;
 }
 
 .switch {
@@ -162,6 +189,16 @@ h1{
     flex-direction: column;
 }
 
+.navbar-body{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .github, .darkmode{
     width: 100%;
     display: flex;
@@ -229,6 +266,10 @@ img.rounded-inner-shadow {
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.808); 
 }
 
+#menu-toggle{
+    margin-left: 5%;
+}
+
 @media (max-width: 768px) {
     .responsive-table {
         display: block;
@@ -253,14 +294,6 @@ img.rounded-inner-shadow {
         width: 100%;
         height: auto;
         margin-top: 10px;
-    }
-
-    .navbar-title{
-        width: 50%;
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 2.5%;
-        margin-left: 2.5%;
     }
 
     .navbar-title h1{
@@ -290,10 +323,6 @@ img.rounded-inner-shadow {
 
     #menu-toggle{
         display: none;
-    }
-
-    .navbar-title{
-        width: 75%;
     }
 
 }
@@ -333,17 +362,9 @@ img.rounded-inner-shadow {
     .container-fluid{
         margin-top: 10% !important;
     }
-
-    .navbar-title{
-        width: 77.5%;
-    }
 }
 
 @media (min-width: 1500px) {
-
-    .navbar-title{
-        width: 80.5%;
-    }
 
     .responsive-table .img-td {
         width: 27.5% !important;

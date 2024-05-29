@@ -16,70 +16,66 @@
 <body class="dark-mode" >
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
-        <div class="bg-dark border-right dark-mode" id="sidebar-wrapper" style="position: relative;">
+        <div class="bg-dark border-right dark-mode" id="sidebar-wrapper">
             <div class="sidebar-heading text-white"></div>
-            <div class="list-group list-group-flush">
+            <div class="list-group list-group-flush" style="flex-grow: 1; overflow-y: auto;">
                 <a href="#home" class="list-group-item list-group-item-action bg-dark text-white dark-mode">Inicio</a>
                 <a href="#about" class="list-group-item list-group-item-action bg-dark text-white dark-mode">Ideación</a>
-                <a href="#services" class="list-group-item list-group-item-action bg-dark text-white dark-mode">Servicios</a>
-                <a href="#contact" class="list-group-item list-group-item-action bg-dark text-white dark-mode">Contacto</a>
-                <div class="dropdown">
-                    <a class="list-group-item dark-mode list-group-item-action bg-dark text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Más
-                    </a>
-                    <div class="dropdown-menu dark-mode bg-dark" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item text-white bg-dark" href="#">Opción 1</a>
-                        <a class="dropdown-item text-white bg-dark" href="#">Opción 2</a>
+                <a href="#storytelling" class="list-group-item list-group-item-action bg-dark text-white dark-mode">Storytelling</a>
+                <a href="#prototipado" class="list-group-item list-group-item-action bg-dark text-white dark-mode">Prototipado</a>
+                <a href="#wireframe" class="list-group-item list-group-item-action bg-dark text-white dark-mode" style="padding-left: 20%; font-size: 0.85em; padding-top:10px; padding-bottom:10px;">Wireframe</a>
+                <a href="#juegos" class="list-group-item list-group-item-action bg-dark text-white dark-mode" style="padding-left: 20%; font-size: 0.85em; padding-top:10px; padding-bottom:10px;">Juegos</a>
+                <a href="#resultado" class="list-group-item list-group-item-action bg-dark text-white dark-mode">Resultado</a>
+                <a href="#version1" class="list-group-item list-group-item-action bg-dark text-white dark-mode" style="padding-left: 20%; font-size: 0.85em; padding-top:10px; padding-bottom:10px;">Versión #1</a>
+            </div>
+            <div style="padding: 10px;">
+                <div class="sidebar-footing">
+                    <div class="github">
+                        <a href="https://github.com/JairoAb" alt="JairoAb" style="text-decoration:none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                            </svg>
+                            <p style="font-size:12px; text-align: center;">JairoAb</p>
+                        </a>
+                        <a href="https://github.com/josamaci" alt="josamaci" style="text-decoration:none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#990000" class="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                            </svg>
+                            <p style="font-size:12px; text-align: center; color:#990000;">josamaci</p>
+                        </a>
+                        <a href="https://github.com/jtibau" alt="jtibau" style="text-decoration:none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#cccccc" class="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                            </svg>
+                            <p style="font-size:12px; text-align: center; color:#cccccc;">jtibau</p>
+                        </a>
                     </div>
-                </div>
-                <div style="position: absolute; bottom: 0; width: 100%; padding: 10px;">
-                    <div class="sidebar-footing">
-                        <div class="github">
-                            
-                            <a href="https://github.com/JairoAb" alt="JairoAb">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                                </svg>
-                            </a>
-
-                            <a href="https://github.com/josamaci" alt="josamaci">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#990000" class="bi bi-github" viewBox="0 0 16 16">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                                </svg>
-                            </a>
-
-                            <a href="https://github.com/jtibau" alt="jtibau">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#cccccc" class="bi bi-github" viewBox="0 0 16 16">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                                </svg>
-                            </a>
-                            
-                        </div>
-                        
-                        <div class="darkmode">
-                            <i class="fa fa-moon-o text-white" style="margin-right: 5%;" aria-hidden="true"></i>
-                            <label class="switch">
-                                <input type="checkbox" id="dark-mode-toggle">
-                                <span class="slider round"></span>
-                            </label>
-                        </div>
-
+                    <div class="darkmode">
+                        <i class="fa fa-moon-o text-white" style="margin-right: 5%;" aria-hidden="true"></i>
+                        <label class="switch">
+                            <input type="checkbox" id="dark-mode-toggle">
+                            <span class="slider round"></span>
+                        </label>
                     </div>
-                    
                 </div>
             </div>
-        </div>
-        
+        </div>  
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
+
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom dark-mode">
-                <button class="btn btn-dark" id="menu-toggle">☰</button>
-                <div class="navbar-title">
-                    <img src="./assets/img/logo2.png" alt="logo" class="responsive-image">
-                    <h1 class="text-white">Momentum</h1>
-                </div>       
+                <div class="navbar-body">
+                    <button class="btn btn-dark" id="menu-toggle">☰</button>
+                    <div class="navbar-title">
+                        &nbsp;
+                    </div>
+                    <div class="navbar-title">
+                        <img src="./assets/img/logo2.png" alt="logo" class="responsive-image">
+                        <h1 class="text-white">Momentum</h1>
+                    </div>   
+                </div>  
             </nav>
 
             <div class="container-fluid">
@@ -96,26 +92,253 @@
                         </tr>
                     </table>
                 </section>
-                <section id="about" style="margin-top: 0 !important;">
+                <section id="about" style="margin-top: 1.25 rem !important;">
                     <h2>Ideación</h2>
                     <table class="responsive-table" style="width: 100%; table-layout: fixed;">
                         <tr>
-                            <td class="img-td" style="width: 40%; vertical-align: middle;">
-                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="https://www.educaciontrespuntocero.com/wp-content/uploads/2019/08/gamificacion-950x652.jpg" style="width: 100%; height: auto;" alt="Gamificación en educación">
+                            <td style="width: 100%; vertical-align: middle; display: flex; justify-content: center; align-items: center; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/ideacion/ideacion.png" style="width: 90%; height: auto;" alt="ideación">
                             </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: middle; padding-right: 20px; width: 90%; padding-top:0.75%; padding-bottom:3.5%; ">
+                                <p>Se realizó un análisis de las posibles vertientes que podría tomar el proyecto, teniendo como resultado una división según el alcance (de salón o masivo) y según la modalidad (individual o cooperativo). Y se colocaron distintos juegos según la disposición en el diagrama usado en la imagen anterior.</p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <h3>Ideas más relevantes</h3>
+                    <table class="responsive-table" style="width: 100%; table-layout: fixed;">
+                        <tr>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/ideacion/topo.png" style="width: 85%; height: auto;" alt="topo">
+                            </td>
+                            <td style="vertical-align: middle; padding-left: 20px;">
+                                <p>Juego Cooperativo-Masivo de golpea al topo por equipos.</p>
+                            </td>
+                        </tr>
+
+                        <tr>
                             <td style="vertical-align: middle; padding-right: 20px;">
-                                <p>AAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+                                <p>Juego Cooperativo-De Salón de carrera de bicicletas con giroscopio.</p>
+                            </td>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/ideacion/bicis.jpg" style="width: 50%; height: auto;" alt="bicis">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/ideacion/bolos.jpg" style="width: 65%; height: auto;" alt="bolos">
+                            </td>
+                            <td style="vertical-align: middle; padding-left: 20px;">
+                                <p>Juego De Salón-Individual de bolos con movimiento mediante botones en pantalla.</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="vertical-align: middle; padding-right: 20px;">
+                                <p>Juego Cooperativo-De Salón de Dibujos. Se trazará un dibujo cooperativamente, una persona controla el movimiento vertical y la otra el horizontal. Tratarán de unir puntos preestablecidos para realizar una figura.</p>
+                            </td>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/ideacion/dibujo.png" style="width: 60%; height: auto;" alt="dibujo">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/ideacion/globos.jpg" style="width: 85%; height: auto;" alt="globos">
+                            </td>
+                            <td style="vertical-align: middle; padding-left: 20px;">
+                                <p>Juego Individual-De Salón infinite runner con globos. El movimiento es de arriba a abajo esquivando trampas. El último en pie es el ganador.</p>
+                            </td>
+                        </tr>
+
+                    </table>
+                </section>
+                <section id="storytelling">
+                    <h2>Storytelling</h2>
+                    <table class="responsive-table" style="width: 100%; table-layout: fixed;">
+                        <tr>
+                            <td class="img-td" style="width: 100%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/storytelling/p1.png" style="width: 85%; height: auto;" alt="p1">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="img-td" style="width: 100%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/storytelling/p2.png" style="width: 85%; height: auto;" alt="p2">
                             </td>
                         </tr>
                     </table>
                 </section>
-                <section id="services">
-                    <h2>Servicios</h2>
-                    <p>Descripción de los servicios ofrecidos.</p>
+                <section id="prototipado">
+                    <h2>Prototipado</h2>
+                    <h3 id="wireframe">Wireframe</h3>
+                    <table class="responsive-table" style="width: 100%; table-layout: fixed;">
+                        <tr>
+                            <td class="img-td" style="width: 100%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/wireframe/inicio.png" style="width: 85%; height: auto;" alt="p1">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="img-td" style="width: 100%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/wireframe/espera.png" style="width: 85%; height: auto;" alt="p2">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="img-td" style="width: 100%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/wireframe/usuario.png" style="width: 40%; height: auto;" alt="p3">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <h3 id="juegos">Juegos</h3>
+
+                    <h4>Carrera de Caballos</h4>
+                    <h5>Vista General</h5>
+                    <table class="responsive-table" style="width: 100%; table-layout: fixed;">
+                        <tr>
+                            <td class="img-td" style="width: 33%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/caballos/inicio.png" style="width: 85%; height: auto;" alt="p1">
+                            </td>
+                            <td class="img-td" style="width: 33%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/caballos/fin.png" style="width: 85%; height: auto;" alt="p1">
+                            </td>
+                            <td class="img-td" style="width: 33%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/caballos/ganador.png" style="width: 85%; height: auto;" alt="p1">
+                            </td>
+                        </tr>
+                    </table>
+                    <h5>Vista Usuario</h5>
+                    <table class="responsive-table" style="width: 100%; table-layout: fixed;">
+                        <tr>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/caballos/jugador-no.png" style="width: 50%; height: auto;" alt="p1">
+                            </td>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/caballos/jugador-tap.png" style="width: 50%; height: auto;" alt="p1">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <h4>Palabra</h4>
+                    <h5>Vista General</h5>
+                    <table class="responsive-table" style="width: 100%; table-layout: fixed;">
+                        <tr>
+                            <td class="img-td" style="width: 33%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/palabras/p1.png" style="width: 85%; height: auto;" alt="p1">
+                            </td>
+                            <td class="img-td" style="width: 33%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/palabras/p2.png" style="width: 85%; height: auto;" alt="p1">
+                            </td>
+                            <td class="img-td" style="width: 33%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/palabras/p3.png" style="width: 85%; height: auto;" alt="p1">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="img-td" style="width: 33%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/palabras/p4.png" style="width: 85%; height: auto;" alt="p1">
+                            </td>
+                            <td class="img-td" style="width: 33%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/palabras/p5.png" style="width: 85%; height: auto;" alt="p1">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <h5>Vista Usuarios</h5>
+                    <table class="responsive-table" style="width: 100%; table-layout: fixed;">
+                        <tr>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/palabras/vu-1.png" style="width: 50%; height: auto;" alt="p1">
+                            </td>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/palabras/vu-2.png" style="width: 50%; height: auto;" alt="p1">
+                            </td>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/palabras/vu-3.png" style="width: 50%; height: auto;" alt="p1">
+                            </td>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/palabras/vu-4.png" style="width: 50%; height: auto;" alt="p1">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <h5>Vista Resultados Finales</h5>
+                    <table class="responsive-table" style="width: 100%; table-layout: fixed;">
+                        <tr>
+                            <td class="img-td" style="width: 33%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/palabras/c-1.png" style="width: 85%; height: auto;" alt="p1">
+                            </td>
+                            <td class="img-td" style="width: 33%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/palabras/c-2.png" style="width: 85%; height: auto;" alt="p1">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <h4>Dibujos</h4>
+                    <h5>Vista General</h5>
+                    <table class="responsive-table" style="width: 100%; table-layout: fixed;">
+                        <tr>
+                            <td class="img-td" style="width: 33%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/dibujo/p1.png" style="width: 85%; height: auto;" alt="p1">
+                            </td>
+                            <td class="img-td" style="width: 33%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/dibujo/p2.png" style="width: 85%; height: auto;" alt="p1">
+                            </td>
+                            <td class="img-td" style="width: 33%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/dibujo/p3.png" style="width: 85%; height: auto;" alt="p1">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <h5>Vista Usuarios</h5>
+                    <table class="responsive-table" style="width: 100%; table-layout: fixed;">
+                        <tr>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/dibujo/us-1.png" style="width: 50%; height: auto;" alt="p1">
+                            </td>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/dibujo/us-2.png" style="width: 50%; height: auto;" alt="p1">
+                            </td>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/dibujo/us-3.png" style="width: 50%; height: auto;" alt="p1">
+                            </td>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/dibujo/us-4.png" style="width: 50%; height: auto;" alt="p1">
+                            </td>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/prototipado/juegos/dibujo/us-5.png" style="width: 50%; height: auto;" alt="p1">
+                            </td>
+                        </tr>
+                    </table>
+
                 </section>
-                <section id="contact">
-                    <h2>Contacto</h2>
-                    <p>Detalles de contacto.</p>
+                <section id="resultado">
+                    <h2>Resultado</h2>
+                    <h3 id="version1">Versión 1</h3>
+                    <h4>Vista General</h4>
+                    <table class="responsive-table" style="width: 100%; table-layout: fixed;">
+                        <tr>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/vistas/vista-admin-inicio.jpg" style="width: 85%; height: auto;" alt="p1">
+                            </td>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/vistas/vista-admin-juego.jpg" style="width: 85%; height: auto;" alt="p1">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <h4>Vista Usuario</h4>
+                    <table class="responsive-table" style="width: 100%; table-layout: fixed;">
+                        <tr>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/vistas/vista-usuario-espera.jpg" style="width: 50%; height: auto;" alt="p1">
+                            </td>
+                            <td class="img-td" style="width: 50%; vertical-align: middle; text-align-last: center;">
+                                <img class="fade-in hover-scale-shadow rounded-inner-shadow" src="./assets/img/vistas/vista-usuario-juego.jpg" style="width: 50%; height: auto;" alt="p1">
+                            </td>
+                        </tr>
+                    </table>
                 </section>
             </div>
         </div>
