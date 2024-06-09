@@ -37,6 +37,7 @@ async function createIdeaImages() {
 			$template.querySelector('img').setAttribute('alt', `Idea ${i}`);
 			$template.querySelector('h3').textContent = `Idea ${i}`;
 			let $clone = document.importNode($template, true);
+			if (i === 1) $clone.querySelector('.carousel-item').classList.add('active');
 			$fragment.appendChild($clone);
 		}
 	}
