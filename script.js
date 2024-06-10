@@ -1,38 +1,41 @@
+// DOM FUCTIONS
 document.addEventListener('DOMContentLoaded', async () => {
-	$('#menu-toggle').click(function (e) {
-		e.preventDefault();
-		$('#wrapper').toggleClass('toggled');
-		$('.navbar').toggleClass('toggled');
-		$('.container-fluid').toggleClass('toggled');
-	});
-
-	$('#dark-mode-toggle').change(function (e) {
-		e.preventDefault();
-		$('body').toggleClass('dark-mode');
-		$('#sidebar-wrapper').toggleClass('dark-mode');
-		$('.list-group-item').toggleClass('dark-mode');
-		$('.dropdown-menu').toggleClass('dark-mode');
-		$('nav').toggleClass('dark-mode');
-	});
-
-	// Mostrar el loader
 	document.querySelector('.loader-container').style.display = 'block';
-
-	await createIdeaImages();
-
-	// Ocultar el loader
+	await createAllIdeas();
+	await createFavoriteIdeas();
 	document.querySelector('.loader-container').style.display = 'none';
 });
 
-async function createIdeaImages() {
+document.getElementById('menu-toggle').addEventListener('click', (e) => {
+	e.preventDefault();
+	document.getElementById('wrapper').classList.toggle('toggled');
+	document.querySelector('.navbar').classList.toggle('toggled');
+	document.querySelector('.container-fluid').classList.toggle('toggled');
+});
+
+document.getElementById('dark-mode-toggle').addEventListener('change', (e) => {
+	e.preventDefault();
+	document.querySelector('body').classList.toggle('dark-mode');
+	document.getElementById('sidebar-wrapper').classList.toggle('dark-mode');
+	Array.from(document.getElementsByClassName('list-group-item')).forEach((item) =>
+		item.classList.toggle('dark-mode')
+	);
+	Array.from(document.getElementsByClassName('dropdown-menu')).forEach((item) =>
+		item.classList.toggle('dark-mode')
+	);
+	document.querySelector('nav').classList.toggle('dark-mode');
+});
+
+// UTILS FUNCTIONS
+const createAllIdeas = async () => {
 	const $fragment = document.createDocumentFragment(),
 		$ideas = document.getElementById('ideas'),
 		$template = document.getElementById('idea-template').content,
-		numberIdeas = 19;
+		numberIdeas = 50;
 
 	for (let i = 1; i <= numberIdeas; i++) {
-		let ruta = `./assets/img/ideacion/ideas/${i}.png`;
-		if (await imagenExiste(ruta)) {
+		let ruta = getImagePath(i);
+		if (await existsImage(ruta)) {
 			$template.querySelector('img').setAttribute('src', ruta);
 			$template.querySelector('img').setAttribute('alt', `Idea ${i}`);
 			$template.querySelector('h3').textContent = `Idea ${i}`;
@@ -43,13 +46,29 @@ async function createIdeaImages() {
 	}
 
 	$ideas.appendChild($fragment);
-}
-
-function imagenExiste(ruta) {
+};
+const createFavoriteIdeas = async () => {
+	const favorites = [1, 14, 21],
+		$fragment = document.createDocumentFragment(),
+		$template = document.getElementById('favorite-idea-template').content,
+		$favoriteIdeas = document.getElementById('favorite-ideas');
+	for (let i = 0; i < favorites.length; i++) {
+		let ruta = getImagePath(favorites[i]);
+		if (await existsImage(ruta)) {
+			$template.querySelector('img').setAttribute('src', ruta);
+			$template.querySelector('img').setAttribute('alt', `Idea ${favorites[i]}`);
+			let $clone = document.importNode($template, true);
+			$fragment.appendChild($clone);
+		}
+	}
+	$favoriteIdeas.appendChild($fragment);
+};
+const getImagePath = (name) => `./assets/img/ideacion/ideas/${name}.png`;
+const existsImage = (ruta) => {
 	return new Promise((resolve, reject) => {
 		let img = new Image();
 		img.onload = () => resolve(true);
 		img.onerror = () => resolve(false);
 		img.src = ruta;
 	});
-}
+};
