@@ -35,14 +35,13 @@ const createAllIdeas = async () => {
 
 	for (let i = 1; i <= numberIdeas; i++) {
 		let ruta = getImagePath(i);
-		if (await existsImage(ruta)) {
-			$template.querySelector('img').setAttribute('src', ruta);
-			$template.querySelector('img').setAttribute('alt', `Idea ${i}`);
-			$template.querySelector('h3').textContent = `Idea ${i}`;
-			let $clone = document.importNode($template, true);
-			if (i === 1) $clone.querySelector('.carousel-item').classList.add('active');
-			$fragment.appendChild($clone);
-		}
+
+		$template.querySelector('img').setAttribute('src', ruta);
+		$template.querySelector('img').setAttribute('alt', `Idea ${i}`);
+		$template.querySelector('h3').textContent = `Idea ${i}`;
+		let $clone = document.importNode($template, true);
+		if (i === 1) $clone.querySelector('.carousel-item').classList.add('active');
+		$fragment.appendChild($clone);
 	}
 
 	$ideas.appendChild($fragment);
@@ -54,21 +53,12 @@ const createFavoriteIdeas = async () => {
 		$favoriteIdeas = document.getElementById('favorite-ideas');
 	for (let i = 0; i < favorites.length; i++) {
 		let ruta = getImagePath(favorites[i]);
-		if (await existsImage(ruta)) {
-			$template.querySelector('img').setAttribute('src', ruta);
-			$template.querySelector('img').setAttribute('alt', `Idea ${favorites[i]}`);
-			let $clone = document.importNode($template, true);
-			$fragment.appendChild($clone);
-		}
+
+		$template.querySelector('img').setAttribute('src', ruta);
+		$template.querySelector('img').setAttribute('alt', `Idea ${favorites[i]}`);
+		let $clone = document.importNode($template, true);
+		$fragment.appendChild($clone);
 	}
 	$favoriteIdeas.appendChild($fragment);
 };
 const getImagePath = (name) => `./assets/img/ideacion/ideas/${name}.png`;
-const existsImage = (ruta) => {
-	return new Promise((resolve, reject) => {
-		let img = new Image();
-		img.onload = () => resolve(true);
-		img.onerror = () => resolve(false);
-		img.src = ruta;
-	});
-};
