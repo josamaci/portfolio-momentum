@@ -1,9 +1,10 @@
 // DOM FUCTIONS
 document.addEventListener('DOMContentLoaded', async () => {
-	document.querySelector('.loader-container').style.display = 'block';
+	const $loader = document.querySelector('.loader-container');
+	$loader.classList.remove('none');
 	await createAllIdeas();
 	await createFavoriteIdeas();
-	document.querySelector('.loader-container').style.display = 'none';
+	$loader.classList.add('none');
 });
 
 document.getElementById('menu-toggle').addEventListener('click', (e) => {

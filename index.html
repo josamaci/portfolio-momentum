@@ -22,42 +22,9 @@
 			rel="stylesheet" />
 	</head>
 	<body class="dark-mode">
-		<div class="loader-container">
-			<div class="loader"></div>
+		<div class="loader-container none">
+			<img class="loader" src="./assets/img/tail-spin.svg" />
 		</div>
-
-		<style>
-			.loader-container {
-				position: fixed; /* Posicionamiento fijo */
-				z-index: 9999; /* Asegura que el loader esté por encima de otros elementos */
-				left: 0;
-				top: 0;
-				width: 100%; /* Ancho completo */
-				height: 100%; /* Alto completo */
-				display: flex; /* Usamos flexbox para centrar el loader */
-				justify-content: center; /* Centra el loader horizontalmente */
-				align-items: center; /* Centra el loader verticalmente */
-				background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con opacidad */
-			}
-
-			.loader {
-				border: 16px solid #f3f3f3; /* Color de la línea */
-				border-top: 16px solid #3498db; /* Color del spinner */
-				border-radius: 50%;
-				width: 120px;
-				height: 120px;
-				animation: spin 2s linear infinite;
-			}
-
-			@keyframes spin {
-				0% {
-					transform: rotate(0deg);
-				}
-				100% {
-					transform: rotate(360deg);
-				}
-			}
-		</style>
 
 		<div class="d-flex" id="wrapper">
 			<!-- Sidebar -->
