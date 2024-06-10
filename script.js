@@ -35,9 +35,10 @@ const createAllIdeas = async () => {
 		numberIdeas = 50;
 
 	for (let i = 1; i <= numberIdeas; i++) {
-		let ruta = getImagePath(i);
+		let path = getImagePath(i);
+		if (!(await existsImage(path))) continue;
 
-		$template.querySelector('img').setAttribute('src', ruta);
+		$template.querySelector('img').setAttribute('src', path);
 		$template.querySelector('img').setAttribute('alt', `Idea ${i}`);
 		$template.querySelector('h3').textContent = `Idea ${i}`;
 		let $clone = document.importNode($template, true);
@@ -53,13 +54,23 @@ const createFavoriteIdeas = async () => {
 		$template = document.getElementById('favorite-idea-template').content,
 		$favoriteIdeas = document.getElementById('favorite-ideas');
 	for (let i = 0; i < favorites.length; i++) {
-		let ruta = getImagePath(favorites[i]);
+		let path = getImagePath(favorites[i]);
+		if (!(await existsImage(path))) continue;
 
-		$template.querySelector('img').setAttribute('src', ruta);
+		$template.querySelector('img').setAttribute('src', path);
 		$template.querySelector('img').setAttribute('alt', `Idea ${favorites[i]}`);
 		let $clone = document.importNode($template, true);
 		$fragment.appendChild($clone);
 	}
 	$favoriteIdeas.appendChild($fragment);
+};
+
+const existsImage = (path) => {
+	const img = new Image();
+	img.src = path;
+	return new Promise((resolve) => {
+		img.onload = () => resolve(true);
+		img.onerror = () => resolve(false);
+	});
 };
 const getImagePath = (name) => `./assets/img/ideacion/ideas/${name}.png`;
