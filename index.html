@@ -1,845 +1,274 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Momentum</title>
+		<title>Games</title>
+		<link rel="stylesheet" href="style.css" />
 		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
 			rel="stylesheet"
-			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 			crossorigin="anonymous" />
-		<script
-			src="https://kit.fontawesome.com/a21fb6557a.js"
-			crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="styles.css" />
-		<link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
-		<link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
-			rel="stylesheet" />
+		<style>
+			@media (max-width: 992px) {
+				#navbar {
+					width: 100%;
+					height: auto;
+					position: relative;
+				}
+				#navbar ul {
+					flex-direction: row;
+					justify-content: center;
+				}
+			}
+			@media (min-width: 992px) {
+				.top-nav {
+					display: none;
+				}
+			}
+			@media (max-width: 991px) {
+				.col-lg-2,
+				.col-lg-8 {
+					width: 100%;
+				}
+			}
+		</style>
 	</head>
-	<body class="dark-mode">
-		<div class="loader-container none">
-			<img class="loader" src="./assets/img/tail-spin.svg" />
-		</div>
-
-		<div class="d-flex" id="wrapper">
-			<!-- Sidebar -->
-			<div class="bg-dark border-right dark-mode" id="sidebar-wrapper">
-				<div class="sidebar-heading text-white"></div>
-				<div
-					class="list-group list-group-flush"
-					style="flex-grow: 1; overflow-y: auto">
-					<a
-						href="#home"
-						class="list-group-item list-group-item-action bg-dark text-white dark-mode"
-						>Inicio</a
-					>
-					<a
-						href="#about"
-						class="list-group-item list-group-item-action bg-dark text-white dark-mode"
-						>Ideación</a
-					>
-					<a
-						href="#storytelling"
-						class="list-group-item list-group-item-action bg-dark text-white dark-mode"
-						>Storytelling</a
-					>
-					<a
-						href="#prototipado"
-						class="list-group-item list-group-item-action bg-dark text-white dark-mode"
-						>Prototipado</a
-					>
-					<a
-						href="#wireframe"
-						class="list-group-item list-group-item-action bg-dark text-white dark-mode"
-						style="
-							padding-left: 20%;
-							font-size: 0.85em;
-							padding-top: 10px;
-							padding-bottom: 10px;
-						"
-						>Wireframe</a
-					>
-					<a
-						href="#juegos"
-						class="list-group-item list-group-item-action bg-dark text-white dark-mode"
-						style="
-							padding-left: 20%;
-							font-size: 0.85em;
-							padding-top: 10px;
-							padding-bottom: 10px;
-						"
-						>Juegos</a
-					>
-					<a
-						href="#resultado"
-						class="list-group-item list-group-item-action bg-dark text-white dark-mode"
-						>Resultado</a
-					>
-					<a
-						href="#version1"
-						class="list-group-item list-group-item-action bg-dark text-white dark-mode"
-						style="
-							padding-left: 20%;
-							font-size: 0.85em;
-							padding-top: 10px;
-							padding-bottom: 10px;
-						"
-						>Versión #1</a
-					>
-				</div>
-				<div style="padding: 10px">
-					<div class="sidebar-footing">
-						<div class="github">
-							<a
-								href="https://github.com/domorales"
-								alt="domorales"
-								style="text-decoration: none">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="32"
-									height="32"
-									fill="currentColor"
-									class="bi bi-github"
-									viewBox="0 0 16 16">
-									<path
-										d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
-								</svg>
-								<p style="font-size: 12px; text-align: center">
-									Dilan Morales
-								</p>
-							</a>
-							<a
-								href="https://github.com/EmilioSG23"
-								alt="EmilioSG23"
-								style="text-decoration: none">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="32"
-									height="32"
-									fill="#990000"
-									class="bi bi-github"
-									viewBox="0 0 16 16">
-									<path
-										d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
-								</svg>
-								<p style="font-size: 12px; text-align: center; color: #990000">
-									Emilio Saenz
-								</p>
-							</a>
-							<a
-								href="https://github.com/jonjapib"
-								alt="jonjapib"
-								style="text-decoration: none">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="32"
-									height="32"
-									fill="#cccccc"
-									class="bi bi-github"
-									viewBox="0 0 16 16">
-									<path
-										d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
-								</svg>
-								<p style="font-size: 12px; text-align: center; color: #cccccc">
-									Jonothan Pibaque
-								</p>
-							</a>
-						</div>
-						<div class="darkmode">
-							<i
-								class="fa fa-moon-o text-white"
-								style="margin-right: 5%"
-								aria-hidden="true"></i>
-							<label class="switch">
-								<input type="checkbox" id="dark-mode-toggle" />
-								<span class="slider round"></span>
-							</label>
-						</div>
-					</div>
+	<body>
+		<!-- Navbar for small screens -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light top-nav">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Navbar</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#about">Acerca</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#ideas">Ideas</a>
+						</li>
+					</ul>
 				</div>
 			</div>
-			<!-- /#sidebar-wrapper -->
+		</nav>
 
-			<!-- Page Content -->
-			<div id="page-content-wrapper">
-				<nav
-					class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom dark-mode">
-					<div class="navbar-body">
-						<button class="btn btn-dark" id="menu-toggle">☰</button>
-						<div class="navbar-title">&nbsp;</div>
-						<div class="navbar-title">
-							<img
-								src="./assets/img/logo2.png"
-								alt="logo"
-								class="responsive-image" />
-							<h1 class="text-white">Momentum</h1>
-						</div>
+		<div class="">
+			<div class="row">
+				<section class="col-lg-2 d-none d-lg-block">
+					<div
+						id="navbar"
+						class="d-flex flex-column flex-shrink-0 p-3 vh-100 sticky-top">
+						<ul
+							class="nav flex-column align-items-center justify-content-center mb-auto h-100">
+							<li class="nav-item">
+								<a href="#init" class="nav-link" aria-current="page">Acerca</a>
+							</li>
+							<li>
+								<a href="#ideas" class="nav-link">Ideas</a>
+							</li>
+						</ul>
 					</div>
-				</nav>
+				</section>
 
-				<div class="container-fluid">
-					<section id="home" style="margin-top: 0 !important">
-						<table
-							class="responsive-table"
-							style="width: 100%; table-layout: fixed">
-							<tr>
-								<td style="vertical-align: middle; padding-right: 20px">
-									<h2>MOMENTUM</h2>
-									<p>
-										Esta es una plataforma web de gamificación propuesta
-										para ámbitos educativos, diseñada para enriquecer el
-										proceso de enseñanza y aprendizaje a través del uso de
-										dinámicas lúdicas e interactivas. Se presenta como una
-										alternativa robusta y versátil a otras herramientas
-										populares como Mentimeter, Kahoot!, Quizizz, entre
-										otras. Proveemos juegos educativos o lúdicos que
-										fomentan la participación activa entre los estudiantes
-										y hacen que el aprendizaje sea más atractivo y
-										efectivo. Además, ofrece una variedad de
-										características personalizables que se adaptan a
-										diferentes niveles educativos y estilos de enseñanza,
-										proporcionando una experiencia única tanto para
-										profesores como para alumnos.
-									</p>
-								</td>
-								<td class="img-td" style="width: 40%; vertical-align: middle">
+				<main
+					data-bs-spy="scroll"
+					data-bs-target="#navbar"
+					class="col-12 col-lg-9 container m-5">
+					<div id="init"></div>
+					<div class="d-flex vh-100 justify-content-center align-items-center">
+						<section id="about" class="row">
+							<article class="col">
+								<div class="title">
+									<h1 class="title">BattleSprint</h1>
+								</div>
+								<p class="mt-5 mb-5">
+									BattleSprint es un juego móvil de corta duración diseñado
+									para ofrecer una experiencia intensa y competitiva. Este
+									juego permite la interacción masiva de jugadores, quienes
+									deben emplear estrategias rápidas para ser el ganador en
+									rondas breves y emocionantes. Con un enfoque en la
+									diversión y la competencia, BattleSprint minimiza las
+									pausas para mantener el ritmo y la adrenalina alta en cada
+									partida.
+								</p>
+							</article>
+							<article class="col mt-5">
+								<figure>
 									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="https://www.educaciontrespuntocero.com/wp-content/uploads/2019/08/gamificacion-950x652.jpg"
-										style="width: 100%; height: auto"
-										alt="Gamificación en educación" />
-								</td>
-							</tr>
-						</table>
-					</section>
-					<section id="about" style="margin-top: 1.25 rem !important">
-						<h2>Ideación</h2>
+										src="images/cover.png"
+										alt="Imagen de portada"
+										class="img-fluid" />
+								</figure>
+							</article>
+						</section>
+					</div>
 
-						<div
-							id="carouselExampleInterval"
-							class="carousel slide m-5"
-							data-bs-ride="carousel">
-							<div id="ideas" class="carousel-inner">
-								<template id="idea-template">
-									<div
-										class="carousel-item"
-										data-bs-interval="false"
-										data-ride="carousel">
-										<div
-											style="
-												vertical-align: middle;
-												padding-right: 20px;
-												width: 90%;
-												padding-top: 0.75%;
-												padding-bottom: 3.5%;
-											">
-											<h3></h3>
-										</div>
-
-										<div
-											style="
-												width: 100%;
-												vertical-align: middle;
-												display: flex;
-												justify-content: center;
-												align-items: center;
-												text-align-last: center;
-											">
-											<img
-												class=""
-												src=""
-												style="width: 90%; height: auto"
-												alt="" />
-										</div>
-									</div>
-								</template>
+					<section
+						id="ideas"
+						class="container-fluid mt-5 scrollspy-example"
+						data-bs-spy="scroll"
+						data-bs-offset="0"
+						data-bs-target="#navbar"
+						data-bs-smooth-scroll="true">
+						<hr />
+						<h2>Ideas</h2>
+						<article class="mt-5">
+							<h3 class="mt-4">1. Encuentra al enemigo</h3>
+							<p class="text-idea">
+								Este es un juego de estrategia en tiempo real donde los
+								participantes se colocan aleatoriamente en un mapa y deben
+								eliminar a los demás jugadores tocando su ubicación. Los
+								jugadores pueden ver el mapa para encontrar a otros, pero al
+								hacerlo, su propia posición se vuelve visible, haciéndolos
+								vulnerables. El objetivo es eliminar a tantos jugadores como
+								sea posible, y el ganador es quien haya eliminado a más
+								participantes.
+							</p>
+							<div class="container-image-idea-1">
+								<div class="item-image-idea-1">
+									<figure>
+										<img
+											src="images/idea_1/1.jpeg"
+											alt="Imagen de ejemplo" />
+										<figcaption>
+											1. Al abrir el juego, se muestra un mapa generado
+											al azar que será usado durante la partida.
+										</figcaption>
+									</figure>
+								</div>
+								<div class="item-image-idea-1">
+									<figure>
+										<img
+											src="images/idea_1/2.jpeg"
+											alt="Imagen de ejemplo" />
+										<figcaption>
+											2. Cuando el juego inicia, se visualizan todas las
+											posiciones: los enemigos en rojo y tu posición con
+											un color de borde distintivo.
+										</figcaption>
+									</figure>
+								</div>
+								<div class="item-image-idea-1">
+									<figure>
+										<img
+											src="images/idea_1/3.jpeg"
+											alt="Imagen de ejemplo" />
+										<figcaption>
+											3.Para eliminar a un contrincante, debes hacer tap
+											en la pantalla en la ubicación del enemigo.
+										</figcaption>
+									</figure>
+								</div>
+								<div class="item-image-idea-1">
+									<figure>
+										<img
+											src="images/idea_1/4.jpeg"
+											alt="Imagen de ejemplo" />
+										<figcaption>
+											4. Para ocultarte, debes hacer tap en "Salir", lo
+											que hará que tu posición desaparezca del mapa.
+										</figcaption>
+									</figure>
+								</div>
+								<div class="item-image-idea-1">
+									<figure>
+										<img
+											src="images/idea_1/5.jpeg"
+											alt="Imagen de ejemplo" />
+										<figcaption>
+											5. Un jugador puede salir del escondite haciendo
+											tap en la pantalla, o el juego lo regresará a la
+											partida automáticamente en 3 segundos.
+										</figcaption>
+									</figure>
+								</div>
+								<div class="item-image-idea-1">
+									<figure>
+										<img
+											src="images/idea_1/6.jpeg"
+											alt="Imagen de ejemplo" />
+										<figcaption>
+											6. Cada vez que un jugador regresa al juego, el
+											juego lo coloca en una nueva posición al azar en el
+											mapa.
+										</figcaption>
+									</figure>
+								</div>
 							</div>
-							<button
-								class="carousel-control-prev"
-								type="button"
-								data-bs-target="#carouselExampleInterval"
-								data-bs-slide="prev">
-								<span
-									class="carousel-control-prev-icon"
-									aria-hidden="true"></span>
-								<span class="visually-hidden">Previous</span>
-							</button>
-							<button
-								class="carousel-control-next"
-								type="button"
-								data-bs-target="#carouselExampleInterval"
-								data-bs-slide="next">
-								<span
-									class="carousel-control-next-icon"
-									aria-hidden="true"></span>
-								<span class="visually-hidden">Next</span>
-							</button>
-						</div>
-
-						<h3>Ideas más relevantes</h3>
-						<table
-							id="favorite-ideas"
-							class="responsive-table"
-							style="width: 100%; table-layout: fixed">
-							<template id="favorite-idea-template">
-								<tr>
-									<td style="vertical-align: middle">
-										<img />
-									</td>
-								</tr>
-							</template>
-						</table>
+						</article>
+						<article class="item-idea">
+							<h3 class="mt-4">2. Laberinto encantado</h3>
+							<p class="text-idea">
+								Este es un juego de estrategia en tiempo real donde los
+								participantes se colocan aleatoriamente en un mapa y deben
+								eliminar a los demás jugadores tocando su ubicación. Los
+								jugadores pueden ver el mapa para encontrar a otros, pero al
+								hacerlo, su propia posición se vuelve visible, haciéndolos
+								vulnerables. El objetivo es eliminar a tantos jugadores como
+								sea posible, y el ganador es quien haya eliminado a más
+								participantes.
+							</p>
+							<div class="container-image-idea-2 d-flex justify-content-center">
+								<div class="item-image-idea-2">
+									<figure>
+										<img
+											src="images/idea_2/1.png"
+											alt="Imagen de ejemplo"
+											class="img-fluid" />
+									</figure>
+								</div>
+							</div>
+						</article>
+						<article class="item-idea">
+							<h3 class="mt-4">3. Defender el vecindario</h3>
+							<p class="text-idea">
+								Es un juego de tipo Tower Defense cooperativo que trata de
+								defender el vecindario contra el ataque alien que se a
+								apoderado del mundo, solo el vecindario es el único lugar a
+								salvo del planeta. A los jugadores se le repartirán 4 roles de
+								defensa: tropas, muros de contención, torres antiovnis y minas
+								de proximidad. Cada jugador contará con un tiempo de espera
+								para colocar lo que le corresponde. Los jugadores lograrán la
+								victoria si consiguen sobrevivir los 60 segundos que dura la
+								invasión, pero deben tener cuidado ya que cada vez que pasa el
+								tiempo, aparecen más aliens y el peligro incrementa.
+							</p>
+							<div class="container-image-idea-3">
+								<div class="item-image-idea-3">
+									<figure>
+										<img
+											src="images/idea_3/1.jpg"
+											alt="Imagen de ejemplo" />
+									</figure>
+								</div>
+								<div class="item-image-idea-3">
+									<figure>
+										<img
+											src="images/idea_3/2.jpg"
+											alt="Imagen de ejemplo" />
+									</figure>
+								</div>
+							</div>
+						</article>
 					</section>
-					<section id="storytelling">
-						<h2>Storytelling</h2>
-						<table
-							class="responsive-table"
-							style="width: 100%; table-layout: fixed">
-							<tr>
-								<td
-									class="img-td"
-									style="
-										width: 100%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/storytelling/p1.png"
-										style="width: 85%; height: auto"
-										alt="p1" />
-								</td>
-							</tr>
-							<tr>
-								<td
-									class="img-td"
-									style="
-										width: 100%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/storytelling/p2.png"
-										style="width: 85%; height: auto"
-										alt="p2" />
-								</td>
-							</tr>
-						</table>
-					</section>
-					<section id="prototipado">
-						<h2>Prototipado</h2>
-						<h3 id="wireframe">Wireframe</h3>
-						<table
-							class="responsive-table"
-							style="width: 100%; table-layout: fixed">
-							<tr>
-								<td
-									class="img-td"
-									style="
-										width: 100%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/wireframe/inicio.png"
-										style="width: 85%; height: auto"
-										alt="p1" />
-								</td>
-							</tr>
-							<tr>
-								<td
-									class="img-td"
-									style="
-										width: 100%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/wireframe/espera.png"
-										style="width: 85%; height: auto"
-										alt="p2" />
-								</td>
-							</tr>
-							<tr>
-								<td
-									class="img-td"
-									style="
-										width: 100%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/wireframe/usuario.png"
-										style="width: 40%; height: auto"
-										alt="p3" />
-								</td>
-							</tr>
-						</table>
-
-						<h3 id="juegos">Juegos</h3>
-
-						<h4>Carrera de Caballos</h4>
-						<h5>Vista General</h5>
-						<table
-							class="responsive-table"
-							style="width: 100%; table-layout: fixed">
-							<tr>
-								<td
-									class="img-td"
-									style="
-										width: 33%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/caballos/inicio.png"
-										style="width: 85%; height: auto"
-										alt="p1" />
-								</td>
-								<td
-									class="img-td"
-									style="
-										width: 33%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/caballos/fin.png"
-										style="width: 85%; height: auto"
-										alt="p1" />
-								</td>
-								<td
-									class="img-td"
-									style="
-										width: 33%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/caballos/ganador.png"
-										style="width: 85%; height: auto"
-										alt="p1" />
-								</td>
-							</tr>
-						</table>
-						<h5>Vista Usuario</h5>
-						<table
-							class="responsive-table"
-							style="width: 100%; table-layout: fixed">
-							<tr>
-								<td
-									class="img-td"
-									style="
-										width: 50%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/caballos/jugador-no.png"
-										style="width: 50%; height: auto"
-										alt="p1" />
-								</td>
-								<td
-									class="img-td"
-									style="
-										width: 50%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/caballos/jugador-tap.png"
-										style="width: 50%; height: auto"
-										alt="p1" />
-								</td>
-							</tr>
-						</table>
-
-						<h4>Palabra</h4>
-						<h5>Vista General</h5>
-						<table
-							class="responsive-table"
-							style="width: 100%; table-layout: fixed">
-							<tr>
-								<td
-									class="img-td"
-									style="
-										width: 33%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/palabras/p1.png"
-										style="width: 85%; height: auto"
-										alt="p1" />
-								</td>
-								<td
-									class="img-td"
-									style="
-										width: 33%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/palabras/p2.png"
-										style="width: 85%; height: auto"
-										alt="p1" />
-								</td>
-								<td
-									class="img-td"
-									style="
-										width: 33%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/palabras/p3.png"
-										style="width: 85%; height: auto"
-										alt="p1" />
-								</td>
-							</tr>
-							<tr>
-								<td
-									class="img-td"
-									style="
-										width: 33%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/palabras/p4.png"
-										style="width: 85%; height: auto"
-										alt="p1" />
-								</td>
-								<td
-									class="img-td"
-									style="
-										width: 33%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/palabras/p5.png"
-										style="width: 85%; height: auto"
-										alt="p1" />
-								</td>
-							</tr>
-						</table>
-
-						<h5>Vista Usuarios</h5>
-						<table
-							class="responsive-table"
-							style="width: 100%; table-layout: fixed">
-							<tr>
-								<td
-									class="img-td"
-									style="
-										width: 50%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/palabras/vu-1.png"
-										style="width: 50%; height: auto"
-										alt="p1" />
-								</td>
-								<td
-									class="img-td"
-									style="
-										width: 50%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/palabras/vu-2.png"
-										style="width: 50%; height: auto"
-										alt="p1" />
-								</td>
-								<td
-									class="img-td"
-									style="
-										width: 50%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/palabras/vu-3.png"
-										style="width: 50%; height: auto"
-										alt="p1" />
-								</td>
-								<td
-									class="img-td"
-									style="
-										width: 50%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/palabras/vu-4.png"
-										style="width: 50%; height: auto"
-										alt="p1" />
-								</td>
-							</tr>
-						</table>
-
-						<h5>Vista Resultados Finales</h5>
-						<table
-							class="responsive-table"
-							style="width: 100%; table-layout: fixed">
-							<tr>
-								<td
-									class="img-td"
-									style="
-										width: 33%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/palabras/c-1.png"
-										style="width: 85%; height: auto"
-										alt="p1" />
-								</td>
-								<td
-									class="img-td"
-									style="
-										width: 33%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/palabras/c-2.png"
-										style="width: 85%; height: auto"
-										alt="p1" />
-								</td>
-							</tr>
-						</table>
-
-						<h4>Dibujos</h4>
-						<h5>Vista General</h5>
-						<table
-							class="responsive-table"
-							style="width: 100%; table-layout: fixed">
-							<tr>
-								<td
-									class="img-td"
-									style="
-										width: 33%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/dibujo/p1.png"
-										style="width: 85%; height: auto"
-										alt="p1" />
-								</td>
-								<td
-									class="img-td"
-									style="
-										width: 33%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/dibujo/p2.png"
-										style="width: 85%; height: auto"
-										alt="p1" />
-								</td>
-								<td
-									class="img-td"
-									style="
-										width: 33%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/dibujo/p3.png"
-										style="width: 85%; height: auto"
-										alt="p1" />
-								</td>
-							</tr>
-						</table>
-
-						<h5>Vista Usuarios</h5>
-						<table
-							class="responsive-table"
-							style="width: 100%; table-layout: fixed">
-							<tr>
-								<td
-									class="img-td"
-									style="
-										width: 50%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/dibujo/us-1.png"
-										style="width: 50%; height: auto"
-										alt="p1" />
-								</td>
-								<td
-									class="img-td"
-									style="
-										width: 50%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/dibujo/us-2.png"
-										style="width: 50%; height: auto"
-										alt="p1" />
-								</td>
-								<td
-									class="img-td"
-									style="
-										width: 50%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/dibujo/us-3.png"
-										style="width: 50%; height: auto"
-										alt="p1" />
-								</td>
-								<td
-									class="img-td"
-									style="
-										width: 50%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/dibujo/us-4.png"
-										style="width: 50%; height: auto"
-										alt="p1" />
-								</td>
-								<td
-									class="img-td"
-									style="
-										width: 50%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/prototipado/juegos/dibujo/us-5.png"
-										style="width: 50%; height: auto"
-										alt="p1" />
-								</td>
-							</tr>
-						</table>
-					</section>
-					<section id="resultado">
-						<h2>Resultado</h2>
-						<h3 id="version1">Versión 1</h3>
-						<h4>Vista General</h4>
-						<table
-							class="responsive-table"
-							style="width: 100%; table-layout: fixed">
-							<tr>
-								<td
-									class="img-td"
-									style="
-										width: 50%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/vistas/vista-admin-inicio.jpg"
-										style="width: 85%; height: auto"
-										alt="p1" />
-								</td>
-								<td
-									class="img-td"
-									style="
-										width: 50%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/vistas/vista-admin-juego.jpg"
-										style="width: 85%; height: auto"
-										alt="p1" />
-								</td>
-							</tr>
-						</table>
-
-						<h4>Vista Usuario</h4>
-						<table
-							class="responsive-table"
-							style="width: 100%; table-layout: fixed">
-							<tr>
-								<td
-									class="img-td"
-									style="
-										width: 50%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/vistas/vista-usuario-espera.jpg"
-										style="width: 50%; height: auto"
-										alt="p1" />
-								</td>
-								<td
-									class="img-td"
-									style="
-										width: 50%;
-										vertical-align: middle;
-										text-align-last: center;
-									">
-									<img
-										class="fade-in hover-scale-shadow rounded-inner-shadow"
-										src="./assets/img/vistas/vista-usuario-juego.jpg"
-										style="width: 50%; height: auto"
-										alt="p1" />
-								</td>
-							</tr>
-						</table>
-					</section>
-				</div>
+				</main>
 			</div>
-			<!-- /#page-content-wrapper -->
 		</div>
-		<!-- /#wrapper -->
 
 		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 			crossorigin="anonymous"></script>
-		<script src="script.js"></script>
 	</body>
 </html>
