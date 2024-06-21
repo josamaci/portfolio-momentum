@@ -3,6 +3,7 @@
 body {
 	font-family: 'Space Grotesk', sans-serif !important;
 	overflow-x: hidden;
+	font-size: 16px; /* Define base font size */
 }
 #navbar {
 	background: #387adf;
@@ -13,13 +14,9 @@ body {
 }
 
 .title h1 {
-	font-size: 8rem !important;
+	font-size: 8rem;
 	font-weight: bold !important;
 	color: #387adf;
-}
-
-h1 {
-	font-size: 50px !important;
 }
 
 h2 {
@@ -101,4 +98,39 @@ p {
 
 .item-idea {
 	margin: 10rem 0 0 0;
+}
+
+@media (max-width: 768px) {
+	h1 {
+		font-size: 4rem !important; /* Tamaño más pequeño para tablets */
+	}
+}
+
+@media (max-width: 480px) {
+	h1 {
+		font-size: 3rem !important; /* Tamaño aún más pequeño para móviles */
+	}
+}
+
+@media (max-width: 992px) {
+	#navbar {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+	#navbar ul {
+		flex-direction: row;
+		justify-content: center;
+	}
+}
+@media (min-width: 992px) {
+	.top-nav {
+		display: none;
+	}
+}
+@media (max-width: 991px) {
+	.col-lg-2,
+	.col-lg-8 {
+		width: 100%;
+	}
 }
