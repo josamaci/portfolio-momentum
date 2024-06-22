@@ -5,6 +5,26 @@ body {
 	font-size: 16px; /* Define base font size */
 }
 
+.loader-container {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 9999;
+}
+
+.loader {
+	position: absolute;
+	left: 43.5%;
+	top: 50%;
+	width: 13%;
+	height: auto;
+}
+
+.none {
+	display: none;
+}
+
 #navbar {
 	background: #387adf;
 }

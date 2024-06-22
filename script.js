@@ -1,6 +1,9 @@
 // DOM FUCTIONS
 document.addEventListener('DOMContentLoaded', async () => {
+	const $loader = document.querySelector('.loader-container');
+	$loader.classList.remove('none');
 	await createAllIdeas();
+	$loader.classList.add('none');
 });
 
 // UTILS FUNCTIONS
