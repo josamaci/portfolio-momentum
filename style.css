@@ -140,21 +140,33 @@ p {
 	border-radius: 20px;
 }
 
-.container-prototype-h {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(min(100%, 410px), 1fr));
-	justify-content: space-between;
+.container-prototype {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-.container-prototype-v {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
-	justify-content: space-between;
+.container-prototype.horizontal .item-prototype{
+	flex: 1 1 410px;
+	max-width: 410px;
+}
+.container-prototype.vertical .item-prototype{
+	flex: 1 1 220px;
+	max-width: 220px;
 }
 
 .item-prototype {
 	padding-left: 1rem;
 	padding-right: 1rem;
+	margin-top: 0.5rem;
+	box-sizing: border-box;
+}
+
+.item-prototype figcaption {
+	font-weight: 400;
+	font-size: 11pt;
+	text-align: justify;
+	margin: 0.5rem;
 }
 
 .item-prototype img {
@@ -163,19 +175,50 @@ p {
 	object-fit: contain;
 	border-radius: 15px;
 }
-.item-prototype figcaption {
-	font-weight: 400;
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
-}
-
 
 .container-prototype-version {
 	
 }
 
 .container-playtesting{
-	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.container-playtesting.horizontal .item-playtesting{
+	flex: 1 1 600px;
+	max-width: 600px;
+}
+.container-playtesting.vertical .item-playtesting{
+	flex: 1 1 350x;
+	max-width: 350px;
+}
+
+.item-playtesting figcaption {
+	font-weight: 400;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.item-playtesting {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	box-sizing: border-box;
+}
+
+.item-playtesting img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	border-radius: 15px;
+}
+
+.playtesting .retroalimentacion b{
+	font-size: 15pt;
+}
+.playtesting .retroalimentacion ul{
+	font-size: 12pt;
 }
 
 #ideas {
