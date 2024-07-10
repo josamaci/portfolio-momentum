@@ -18,9 +18,9 @@
 		</div>
 		<main class="">
 			<!-- Navbar for small screens -->
-			<nav class="navbar navbar-expand-lg navbar-light bg-light top-nav">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark top-nav">
 				<div class="container-fluid">
-					<a class="navbar-brand" href="#">Navbar</a>
+					<a class="navbar-brand" href="#">Portafolio</a>
 					<button
 						class="navbar-toggler"
 						type="button"
@@ -46,7 +46,7 @@
 								<a class="nav-link" href="#storytelling">Storytelling</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#ideas">Prototipos</a>
+								<a class="nav-link" href="#prototipos1">Prototipos v1</a>
 							</li>
 						</ul>
 					</div>
@@ -74,7 +74,7 @@
 								<a class="nav-link" href="#storytelling">Storytelling</a>
 							</li>
 							<li>
-								<a href="#" class="nav-link">Prototipos</a>
+								<a href="#prototipos1" class="nav-link">Prototipos v1</a>
 							</li>
 						</ul>
 					</div>
@@ -123,7 +123,16 @@
 						data-bs-target="#navbar"
 						data-bs-smooth-scroll="true">
 						<h2>Ideas</h2>
-
+						<p class="text-idea">
+							Para la realización de la ideación de juegos, se hizo uso de la técnica del <b>Brainstorming</b> para generar un total de 61 ideas,
+							realizadas en dos tandas. La primera tanda reúne las primeras 30 ideas, mientras que la segunda tanda reune las 31 ideas restantes.
+							También, se usó herramientas de apoyo para la generación de ideas tales como:
+							<ul class = "tools">
+								<li><a href = "https://thestoryshack.com/es/generadores/generador-de-temas-de-juegos/">Generador de temas de juegos</a></li>
+								<li><a href = "https://letsmakeagame.net/game-idea-generator/">Generador de ideas de juegos</a></li>
+								<li><a href = "https://chat.openai.com/">ChatGPT</a></li>
+							</ul>
+						</p>
 						<article
 							id="carouselExampleInterval"
 							class="carousel slide m-5 mb-5"
@@ -193,7 +202,10 @@
 						data-bs-target="#navbar"
 						data-bs-smooth-scroll="true">
 						<h2>Ideas relevantes</h2>
-
+						<p class="text-idea">
+							De las 61 ideas generadas, se seleccionaron la que a nosotros como grupo nos pareció las 3 ideas más relevantes, tomando
+							en cuenta su factibilidad, diversión, facilidad de entender y posible intuitividad.
+						</p>
 						<article class="mt-5">
 							<div class="row d-flex align-content-center align-items-center">
 								<div class="col">
@@ -202,7 +214,12 @@
 										src="images/ideas/31.png"
 										alt="" />
 								</div>
-								<div class="col"></div>
+								<div class="col">
+									Se escogió esta idea ya que puede ser escalable a una gran cantidad de personas que lo pueden jugar.
+									El juego es de tipo Tower Defense con temática alien, y los jugadores podrán hacer uso del rol
+									asignado para defender la casa. El juego necesita de juego en equipo, estrategia en la ejecución de los
+									roles correspondientes.
+								</div>
 							</div>
 							<div class="row d-flex align-content-center align-items-center">
 								<div class="col">
@@ -213,7 +230,7 @@
 									considerarse caótico debido a que su mecánica principal es
 									el 'tap', que debe usarse continuamente durante toda la
 									partida. Es un juego en el que se necesita tener mucha
-									atención y concentración para llegar al podio."
+									atención y concentración para llegar al podio.
 								</div>
 								<div class="col">
 									<img
@@ -382,6 +399,55 @@
 									</figure>
 								</div>
 							</div>
+						</article>
+					</section>
+					<section
+						id="prototipos1"
+						class="container-fluid mt-5 scrollspy-example"
+						data-bs-spy="scroll"
+						data-bs-offset="0"
+						data-bs-target="#navbar"
+						data-bs-smooth-scroll="true">
+						<h2>Prototipos: Primeras versiones</h2>
+						<article class="mt-5">
+							<h3 class="mt-4">1. Encuentra al enemigo</h3>
+							<p class="text-idea">
+								Este es un juego de estrategia en tiempo real donde los
+								participantes se colocan aleatoriamente en un mapa y deben
+								eliminar a los demás jugadores tocando su ubicación. Los
+								jugadores pueden ver el mapa para encontrar a otros, pero al
+								hacerlo, su propia posición se vuelve visible, haciéndolos
+								vulnerables. El objetivo es eliminar a tantos jugadores como
+								sea posible, y el ganador es quien haya eliminado a más
+								participantes.
+							</p>
+						</article>
+						<article class="item-idea">
+							<h3 class="mt-4">2. Laberinto encantado</h3>
+							<p class="text-idea">
+								El objetivo del juego es salir del laberinto a través de la
+								puerta que coincide con el color asignado a tu grupo. Todos los
+								jugadores conectados se dividen aleatoriamente en 4 grupos,
+								cada uno representado por un color y un número distintivo para
+								cada jugador. Si dos jugadores de equipos contrarios chocan,
+								ambos mueren. Además, los jugadores pueden disparar a miembros
+								de otros equipos. El grupo vencedor será aquel cuyo número
+								ganador logre completar el laberinto primero.
+							</p>
+						</article>
+						<article class="item-idea">
+							<h3 class="mt-4">3. Defender el vecindario</h3>
+							<p class="text-idea">
+								Es un juego de tipo Tower Defense cooperativo que trata de
+								defender el vecindario contra el ataque alien que se a
+								apoderado del mundo, solo el vecindario es el único lugar a
+								salvo del planeta. A los jugadores se le repartirán 4 roles de
+								defensa. Cada jugador contará con un tiempo de espera
+								para colocar lo que le corresponde. Los jugadores lograrán la
+								victoria si consiguen sobrevivir los 60 segundos que dura la
+								invasión, pero deben tener cuidado ya que cada vez que pasa el
+								tiempo, aparecen más aliens y el peligro incrementa.
+							</p>
 						</article>
 					</section>
 				</div>

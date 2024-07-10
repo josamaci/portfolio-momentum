@@ -27,8 +27,12 @@ body {
 
 #navbar {
 	background: #387adf;
+	border-right: 0.25rem solid;
+	border-color: #00204e;
 }
-
+#ideas a{
+	color: black !important;
+}
 .title {
 	margin: 100px 100px 0px 0px !important;
 }
@@ -40,11 +44,15 @@ body {
 }
 
 h2 {
+	color: #00204e;
 	font-size: 3rem !important;
 	font-weight: bold !important;
+	border-bottom: 3px solid;
+	border-image: linear-gradient(90deg,rgb(0, 32, 78, 1) 0%, rgb(0, 32, 78, 1) 25%, rgb(0, 32, 78, 0) 100%) 1;
 }
 
 h3 {
+	color: #387adf;
 	font-size: 2rem !important;
 }
 
@@ -72,6 +80,7 @@ p {
 
 .image-idea-relevant {
 	width: 100%;
+	box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.15);
 }
 
 .container-image-idea-1 {
@@ -111,7 +120,8 @@ p {
 	width: 60%;
 	height: 60%;
 	object-fit: contain;
-	border: 5px solid #387adf;
+	border: 3px solid #387adf;
+	box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.25);
 }
 
 #ideas {
