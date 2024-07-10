@@ -59,7 +59,15 @@ h3 {
 
 h4 {
 	color: #387adf;
-	font-size: 2rem !important;
+	font-size: 1.70rem !important;
+	font-weight: 400;
+	margin-left: 10px;
+}
+h5 {
+	color: #00204e;
+	font-size: 1.50rem !important;
+	font-weight: 400;
+	margin-left: 10px;
 }
 
 a {
@@ -104,6 +112,7 @@ p {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
+	border-radius: 20px;
 }
 
 .item-image-idea-1 figcaption {
@@ -126,8 +135,9 @@ p {
 	width: 60%;
 	height: 60%;
 	object-fit: contain;
-	border: 3px solid #387adf;
+	border: 2px solid #387adf;
 	box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.25);
+	border-radius: 20px;
 }
 
 .container-prototype-h {
@@ -136,43 +146,34 @@ p {
 	justify-content: space-between;
 }
 
-.item-prototype-h {
-	padding-left: 1rem;
-	padding-right: 1rem;
-}
-
-.item-prototype-h img {
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-}
-.item-prototype-h figcaption {
-	font-weight: 500;
-}
-
 .container-prototype-v {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
 	justify-content: space-between;
 }
 
-.item-prototype-v {
+.item-prototype {
 	padding-left: 1rem;
 	padding-right: 1rem;
 }
 
-.item-prototype-v img {
+.item-prototype img {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
+	border-radius: 15px;
 }
-.item-prototype-v figcaption {
+.item-prototype figcaption {
 	font-weight: 500;
 }
 
+
+.container-prototype-version {
+	
+}
+
 .container-playtesting{
-	border-bottom: 2px solid;
-	border-image: linear-gradient(90deg,rgb(0, 32, 78, 0) 0%, rgb(0, 32, 78, 1) 50%, rgb(0, 32, 78, 0) 100%) 1;
+	
 }
 
 #ideas {
