@@ -11,7 +11,7 @@ const createAllIdeas = async () => {
 	const $fragment = document.createDocumentFragment(),
 		$ideas = document.getElementById('ideas-carousel'),
 		$template = document.getElementById('idea-template').content,
-		numberIdeas = 50;
+		numberIdeas = 61;
 
 	for (let i = 1; i <= numberIdeas; i++) {
 		let path = getImagePath(i);

@@ -70,6 +70,10 @@ p {
 	text-align: justify;
 }
 
+.image-idea-relevant {
+	width: 100%;
+}
+
 .container-image-idea-1 {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(min(100%, 410px), 1fr));
