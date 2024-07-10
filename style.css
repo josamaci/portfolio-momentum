@@ -54,6 +54,12 @@ h2 {
 h3 {
 	color: #387adf;
 	font-size: 2rem !important;
+	font-weight: bold !important;
+}
+
+h4 {
+	color: #387adf;
+	font-size: 2rem !important;
 }
 
 a {
@@ -122,6 +128,51 @@ p {
 	object-fit: contain;
 	border: 3px solid #387adf;
 	box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.25);
+}
+
+.container-prototype-h {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 410px), 1fr));
+	justify-content: space-between;
+}
+
+.item-prototype-h {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.item-prototype-h img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+.item-prototype-h figcaption {
+	font-weight: 500;
+}
+
+.container-prototype-v {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+	justify-content: space-between;
+}
+
+.item-prototype-v {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.item-prototype-v img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+.item-prototype-v figcaption {
+	font-weight: 500;
+}
+
+.container-playtesting{
+	border-bottom: 2px solid;
+	border-image: linear-gradient(90deg,rgb(0, 32, 78, 0) 0%, rgb(0, 32, 78, 1) 50%, rgb(0, 32, 78, 0) 100%) 1;
 }
 
 #ideas {
