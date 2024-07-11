@@ -1,9 +1,9 @@
 // DOM FUCTIONS
 document.addEventListener('DOMContentLoaded', async () => {
-	//const $loader = document.querySelector('.loader-container');
-	//$loader.classList.remove('none');
+	const $loader = document.querySelector('.loader-container');
+	$loader.classList.remove('none');
 	await createAllIdeas();
-	//$loader.classList.add('none');
+	$loader.classList.add('none');
 });
 
 // UTILS FUNCTIONS
@@ -25,8 +25,7 @@ const createAllIdeas = async () => {
 		$fragment.appendChild($clone);
 	}
 
-	$ideas.appendChild($fragment);
-	console.log("Carousele loaded")
+	$ideas.appendChild($fragment);	
 };
 
 const existsImage = (path) => {

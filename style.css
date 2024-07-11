@@ -32,6 +32,7 @@ body {
 }
 #ideas a{
 	color: black !important;
+	font-weight: 400 !important;
 }
 .title {
 	margin: 100px 100px 0px 0px !important;
@@ -41,6 +42,10 @@ body {
 	font-size: 8rem;
 	font-weight: bold !important;
 	color: #387adf;
+}
+
+.members {
+	font-size: 20pt;
 }
 
 h2 {
@@ -95,6 +100,9 @@ p {
 .image-idea-relevant {
 	width: 100%;
 	box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.15);
+	border-radius: 20px;
+	border: 3pt solid;
+	border-color: #00fa2a;
 }
 
 .container-image-idea-1 {
