@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Momentum - Inicio Juegos</title>
+    <style>
+        body {
+            font-family: "Oswald", sans-serif;
+            font-optical-sizing: auto;
+            background-color: #d3e2f4;
+            margin: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #c5d9f0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header .logo {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .header .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .search-bar {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .search-bar input {
+            width: 70%;
+            padding: 8px;
+            border: 1px solid #999;
+            border-radius: 4px;
+        }
+        .login2 {
+            display: none;
+            align-items: center;
+        }
+        .header .login {
+            display: flex;
+            align-items: center;
+        }
+        .header .login input,
+        .login2 input {
+            padding: 8px;
+            margin-left: 10px;
+            border: 1px solid #999;
+            border-radius: 4px;
+        }
+        .header .login button,
+        .login2 button {
+            padding: 8px;
+            margin-left: 10px;
+            border: 1px solid #999;
+            border-radius: 4px;
+            background-color: #ebebeb;
+            cursor: pointer;
+        }
+        .filters {
+            display: flex;
+            padding: 2% 5%;
+            background-color: #b0c7e4;
+            align-content: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .filters label, .filters select {
+            margin: 0 10px;
+        }
+        .games-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .games-category {
+            width: 80%;
+            margin: 20px 0;
+        }
+        .games-category h2 {
+            text-align: center;
+            background-color: #c5d9f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .games-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #e1eff9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .game-card {
+            width: 35%;
+            margin: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .game-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .game-card h3 {
+            margin: 10px 0 0;
+            font-size: 16px;
+        }
+        @media (max-width: 768px) {
+            .filters, .games-section {
+                display: none;
+            }
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .header .login {
+                display: none;
+            }
+
+            .login2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 60%;
+                justify-content: center;
+                align-items: center;
+            }
+            .login2 input, .header .login2 button {
+                width: 90%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo" onclick="location.href='index.html'">
+            <img src="./assets/img/logo2.png" alt="Logo">
+            <h1>MOMENTUM</h1>
+        </div>
+        <div class="login">
+            <input type="text" id="unirse-input" placeholder="Ingrese el código de la sala...">
+            <button onclick="unirse()">Unirme</button>
+        </div>
+    </header>
+
+    <div class="login2">
+        <input type="text" id="unirse-input" placeholder="Ingrese el código de la sala...">
+        <button onclick="unirse()">Unirme</button>
+    </div>
+
+    <div class="filters">
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Buscar juegos...">
+        </div>
+        <div>
+            <label for="type-filter">Tipo de juego:</label>
+            <select id="type-filter">
+                <option value="all">Todos</option>
+                <option value="ludicos">Lúdicos</option>
+                <option value="educacionales">Educacionales</option>
+            </select>
+        </div>
+    </div>
+    <section class="games-section" id="games-section">
+        <div class="games-category" data-type="ludicos">
+            <h2>Lúdicos</h2>
+            <div class="games-list">
+                <div class="game-card" data-name="Carrera de caballos">
+                    <img src="./assets/img/prototipado/juegos/caballos/inicio.png" alt="Carrera de caballos">
+                    <h3>Carrera de caballos</h3>
+                </div>
+                <div class="game-card" data-name="Dibujos">
+                    <img src="./assets/img/prototipado/juegos/dibujo/p1.png" alt="Dibujos">
+                    <h3>Dibujos</h3>
+                </div>
+            </div>
+        </div>
+        <div class="games-category" data-type="educacionales">
+            <h2>Educacionales</h2>
+            <div class="games-list">
+                <div class="game-card" data-name="Juego educativo 1">
+                    <img src="./assets/img/prototipado/juegos/palabras/p1.png" alt="Juego educativo 1">
+                    <h3>"Ahorcado"</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('search').addEventListener('input', filterGames);
+        document.getElementById('type-filter').addEventListener('change', filterGames);
+
+        function filterGames() {
+            const searchValue = document.getElementById('search').value.toLowerCase();
+            const typeValue = document.getElementById('type-filter').value;
+            const categories = document.querySelectorAll('.games-category');
+
+            categories.forEach(category => {
+                const gameType = category.getAttribute('data-type');
+                const games = category.querySelectorAll('.game-card');
+
+                let hasVisibleGames = false;
+                games.forEach(game => {
+                    const gameName = game.getAttribute('data-name').toLowerCase();
+                    if ((typeValue === 'all' || typeValue === gameType) && gameName.includes(searchValue)) {
+                        game.style.display = 'block';
+                        hasVisibleGames = true;
+                    } else {
+                        game.style.display = 'none';
+                    }
+                });
+
+                if (hasVisibleGames) {
+                    category.style.display = 'block';
+                } else {
+                    category.style.display = 'none';
+                }
+            });
+        }
+
+        function unirse() {
+            const inputValue = document.getElementById('unirse-input').value;
+            if (inputValue) {
+                const url = `https://momentum-front.vercel.app/lobby/${inputValue}`;
+                window.location.href = url;
+            } else {
+                alert("Por favor, ingrese un código para unirse.");
+            }
+        }
+    </script>
+</body>
+</html>
