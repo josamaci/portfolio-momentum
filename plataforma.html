@@ -186,7 +186,7 @@
         <div class="games-category" data-type="ludicos">
             <h2>Lúdicos</h2>
             <div class="games-list">
-                <div class="game-card" data-name="Carrera de caballos">
+                <div class="game-card" data-name="Carrera de caballos" >
                     <img src="./assets/img/prototipado/juegos/caballos/inicio.png" alt="Carrera de caballos">
                     <h3>Carrera de caballos</h3>
                 </div>
@@ -211,6 +211,10 @@
         document.getElementById('search').addEventListener('input', filterGames);
         document.getElementById('type-filter').addEventListener('change', filterGames);
 
+        document.querySelector('.game-card').addEventListener('click', function() {
+            window.location.href = 'https://momentum-front.vercel.app';
+        });
+        
         function filterGames() {
             const searchValue = document.getElementById('search').value.toLowerCase();
             const typeValue = document.getElementById('type-filter').value;
