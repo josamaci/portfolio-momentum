@@ -165,8 +165,8 @@
     </header>
 
     <div class="login2">
-        <input type="text" id="unirse-input" placeholder="Ingrese el código de la sala...">
-        <button onclick="unirse()">Unirme</button>
+        <input type="text" id="unirse-input2" placeholder="Ingrese el código de la sala...">
+        <button onclick="unirse2()">Unirme</button>
     </div>
 
     <div class="filters">
@@ -241,6 +241,16 @@
 
         function unirse() {
             const inputValue = document.getElementById('unirse-input').value;
+            if (inputValue) {
+                const url = `https://momentum-front.vercel.app/lobby/${inputValue}`;
+                window.location.href = url;
+            } else {
+                alert("Por favor, ingrese un código para unirse.");
+            }
+        }
+
+        function unirse2() {
+            const inputValue = document.getElementById('unirse-input2').value;
             if (inputValue) {
                 const url = `https://momentum-front.vercel.app/lobby/${inputValue}`;
                 window.location.href = url;
