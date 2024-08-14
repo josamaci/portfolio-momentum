@@ -186,9 +186,13 @@
         <div class="games-category" data-type="ludicos">
             <h2>Lúdicos</h2>
             <div class="games-list">
-                <div class="game-card" data-name="Carrera de caballos" >
+                <div class="game-card" id="caballos" data-name="Carrera de caballos" >
                     <img src="./assets/img/prototipado/juegos/caballos/inicio.png" alt="Carrera de caballos">
                     <h3>Carrera de caballos</h3>
+                </div>
+                <div class="game-card" id="tortugas" data-name="Carrera de caballos" >
+                    <img src="./assets/img/prototipado/juegos/caballos/tortugas.png" alt="Carrera matemática">
+                    <h3>Carrera Matemática</h3>
                 </div>
                 <div class="game-card" data-name="Dibujos">
                     <img src="./assets/img/prototipado/juegos/dibujo/p1.png" alt="Dibujos">
@@ -211,8 +215,11 @@
         document.getElementById('search').addEventListener('input', filterGames);
         document.getElementById('type-filter').addEventListener('change', filterGames);
 
-        document.querySelector('.game-card').addEventListener('click', function() {
+        document.querySelector('#caballos').addEventListener('click', function() {
             window.location.href = 'https://momentum-front.vercel.app';
+        });
+        document.querySelector('#tortugas').addEventListener('click', function() {
+            window.location.href = 'https://momentum-front-tortugas.vercel.app/';
         });
         
         function filterGames() {
